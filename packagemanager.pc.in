@@ -1,0 +1,6 @@
+Name: PackageManager
+Description: PackageManager
+Version: 
+
+Requires: 
+Libs: -r:@expanded_libdir@/@PACKAGE@/PackageManager.dll

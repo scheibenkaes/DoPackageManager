@@ -1,0 +1,44 @@
+<Project name="PackageManager" fileversion="2.0" DefaultNamespace="PackageManager" language="C#" targetFramework="3.5" ctype="DotNetProject">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Debug" assembly="PackageManager" />
+      <Build debugmode="True" target="Library" />
+      <Execution consolepause="False" runwithwarnings="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" definesymbols="DEBUG" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+    <Configuration name="Release" ctype="DotNetProjectConfiguration">
+      <Output directory="bin/Release" assembly="PackageManager" />
+      <Build debugmode="False" target="Library" />
+      <Execution consolepause="False" runwithwarnings="True" runtime="MsNet" />
+      <CodeGeneration compiler="Mcs" warninglevel="4" optimize="False" unsafecodeallowed="False" generateoverflowchecks="False" generatexmldocumentation="False" ctype="CSharpCompilerParameters" />
+    </Configuration>
+  </Configurations>
+  <Contents>
+    <File subtype="Directory" buildaction="Compile" name="." />
+    <File subtype="Directory" buildaction="Compile" name="src" />
+    <File subtype="Directory" buildaction="Compile" name="Resources" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="Resources/PackageManager.addin.xml" />
+    <File subtype="Directory" buildaction="Compile" name="src/Apt" />
+    <File subtype="Code" buildaction="Compile" name="src/PackageManagerAct.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/PackageItem.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/IPackageManagerBackend.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/Apt/AptBackend.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/PackageManagerFactory.cs" />
+    <File subtype="Code" buildaction="EmbedAsResource" name="gtk-gui/gui.stetic" />
+    <File subtype="Code" buildaction="Compile" name="gtk-gui/generated.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/Configuration.cs" />
+    <File subtype="Code" buildaction="Compile" name="gtk-gui/PackageManager.Configuration.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/PackageManagerSelectedEventArgs.cs" />
+    <File subtype="Code" buildaction="Compile" name="src/Preferences.cs" />
+  </Contents>
+  <References>
+    <ProjectReference type="Gac" localcopy="True" refto="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <ProjectReference type="Gac" localcopy="True" refto="Do.Universe, Version=0.9.0.0, Culture=neutral" />
+    <ProjectReference type="Gac" localcopy="True" refto="Do.Platform, Version=0.9.0.0, Culture=neutral" />
+    <ProjectReference type="Gac" localcopy="True" refto="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
+    <ProjectReference type="Gac" localcopy="True" refto="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
+    <ProjectReference type="Gac" localcopy="True" refto="Do.Platform.Linux, Version=0.9.0.0, Culture=neutral" />
+  </References>
+</Project>

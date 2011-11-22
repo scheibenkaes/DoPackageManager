@@ -1,0 +1,16 @@
+<Combine fileversion="2.0">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="PackageManager" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="PackageManager" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="PackageManager" single="True">
+    <Execute type="None" entry="PackageManager" />
+  </StartMode>
+  <Entries>
+    <Entry filename="PackageManager.mdp" />
+  </Entries>
+</Combine>
